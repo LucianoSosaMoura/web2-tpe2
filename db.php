@@ -6,10 +6,10 @@ function connectToDb() {
 
 
 
-function insertProduct($precio, $color, $tamaño, $fk_id_estilo) {
+function insertProduct($precio, $color, $tamanio, $fk_id_estilo) {
     $db = connectToDb();
-    $sentencia = $db->prepare("INSERT INTO producto(precio, color, tamaño, fk_id_estilo) VALUES(?, ?, ?, ?)");
-    $sentencia->execute(array($precio, $color, $tamaño, $fk_id_estilo));
+    $sentencia = $db->prepare("INSERT INTO producto(precio, color, tamanio, fk_id_estilo) VALUES(?, ?, ?, ?)");
+    $sentencia->execute(array($precio, $color, $tamanio, $fk_id_estilo));
 
 };
 
